@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LittleUserManager.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace LittleUserManager.Views
         public AddUser()
         {
             InitializeComponent();
+            AddUserViewModel userViewModel = new AddUserViewModel();
+            this.DataContext = userViewModel;
         }
     }
 }

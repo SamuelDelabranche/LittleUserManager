@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LittleUserManager.ViewModels
 {
-    internal class AddUserViewModel
+    public class AddUserViewModel
     {
     }
 }
