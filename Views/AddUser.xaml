@@ -33,7 +33,9 @@
                     <Button Content="Valider"
                             VerticalAlignment="Bottom" 
                             Margin="0 0 0 20"
-                            Width="100"/>
+                            Width="100"
+                            Command="{Binding ValidCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
                 </Grid>
             </Border>
         </Border>

@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LittleUserManager"
         mc:Ignorable="d"
-        Title="Little User Manager"
+        Title="Little Users Manager"
+        Name="mainwindow"
         Height="650"
         Width="1000">
 
@@ -42,7 +43,9 @@
 
                     <Button Content="Ajouter"
                             Grid.Row="0"
-                            Grid.Column="1" />
+                            Grid.Column="1"
+                            Command="{Binding ShowAddUserButton}"
+                            CommandParameter="{x:Reference Name= mainwindow}"/>
 
                     <ListView Grid.Row="1"
                               Grid.ColumnSpan="2"
