@@ -14,5 +14,6 @@ namespace LittleUserManager.Models
 
         public static ObservableCollection<UserViewModel> GetAllUsers() => dataBaseUsers;
         public static void AddUser(UserViewModel user) => dataBaseUsers.Add(user);
+        public static void RemoveUser(UserViewModel user) => dataBaseUsers.Remove(user);
     }
 }

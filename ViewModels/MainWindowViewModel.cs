@@ -15,6 +15,7 @@ namespace LittleUserManager.ViewModels
     {
         public ObservableCollection<UserViewModel> Users { get; set; }
         public ICommand ShowAddUserButton { get; set; }
+        public ICommand DeleteSelectedItemButton { get; set; }
 
         private bool _isButtonVisible;
         public bool IsButtonVisible
@@ -51,7 +52,14 @@ namespace LittleUserManager.ViewModels
             UserManager.AddUser(new UserViewModel(new User("Samuel", "samuel.delabranche0@gmail.com", new DateTime(2004, 04, 12))));
 
             ShowAddUserButton = new RelayCommand(ShowAddUserWindow);
+            DeleteSelectedItemButton = new RelayCommand(DeleteSelectedItem);
             IsButtonVisible = false;
+        }
+
+        private void DeleteSelectedItem(object obj)
+        {
+            UserManager.RemoveUser(SelectedItem);
+            SelectedItem = null;
         }
 
         private void ShowAddUserWindow(object obj)
