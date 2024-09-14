@@ -29,5 +29,10 @@ namespace LittleUserManager.ViewModels
         {
             _execute(parameter);
         }
+
+        public void OnCanExecutedChanged()
+        {
+            CanExecuteChanged?.Invoke(this, new EventArgs());
+        }
     }
 }

@@ -80,7 +80,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserManager.cs" />
     <Compile Include="ViewModels\AddUserViewModel.cs" />
+    <Compile Include="ViewModels\BoolConverter.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\Observable.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />

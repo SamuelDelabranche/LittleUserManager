@@ -25,7 +25,18 @@ namespace LittleUserManager
         {
             InitializeComponent();
             MainWindowViewModel mainViewModel = new MainWindowViewModel();
-            this.DataContext = mainViewModel;
+            DataContext = mainViewModel;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DataListView.Items.Filter = CustomFilter;
+        }
+
+        private bool CustomFilter(object obj)
+        {
+            var user = (UserViewModel)obj;
+            return user.Name.ToLower().Contains(FilterInput.Text.ToLower());
         }
     }
 }

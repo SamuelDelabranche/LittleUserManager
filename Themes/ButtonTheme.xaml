@@ -6,12 +6,6 @@
                 Value="100" />
         <Setter Property="Height"
                 Value="30" />
-        <Setter Property="HorizontalAlignment"
-                Value="Right" />
-        <Setter Property="VerticalAlignment"
-                Value="Top" />
-        <Setter Property="Margin"
-                Value="25" />
         <Setter Property="FontSize"
                 Value="14" />
 
@@ -37,7 +31,22 @@
                 <Setter Property="Cursor"
                         Value="Hand" />
             </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="False">
+                <Setter Property="Background"
+                        Value="#737373" />
+            </Trigger>
         </Style.Triggers>
+
+    </Style>
+
+    <Style BasedOn="{StaticResource {x:Type Button}}" x:Key="addUserButton" TargetType="Button">
+        <Setter Property="Width"
+                Value="100" />
+        <Setter Property="Height"
+                Value="30" />
+        <Setter Property="Margin"
+                Value="25" />
 
     </Style>
 </ResourceDictionary>
